@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Verbal Vortex</title>
+    <title>UN SDG Learning</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/R.png">
@@ -20,6 +20,53 @@
 </head>
 
 <body>
+    <style>
+       
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+/* 
+section {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+} */
+
+#map {
+  width: 100%; /* Full width of its parent */
+  height: 400px; /* Set a height for visibility */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* To position children if needed */
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+    </style>
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-circle"></div>
@@ -85,7 +132,7 @@
                                             <!-- <li><a href="about.html">About</a></li> -->
                                         </ul>
                                     </li>
-                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="map.html">Global Pollution Data</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="resources.html">Resources</a></li>                                </ul>
 
@@ -112,49 +159,30 @@
 
    <!-- ##### Hero Area Start ##### -->
 <section class="hero-area">
+    <!---
+    
+    --->
     <div class="hero-post-slides owl-carousel">
-        <!-- Single Hero Post -->
+       
         <div class="single-hero-post">
-            <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url('img/hottie.jpeg');"></div>
-            <!-- Black Overlay -->
-            <div class="black-overlay"></div>
+           
+            <div class="slide-img bg-img" style="background-color: #003c6c;"></div>
+            
+            <!-- <div class="black-overlay"></div> -->
         </div>
-        <div class="single-hero-post">
-            <!-- Post Image -->
+        <!-- <div class="single-hero-post">
+           
             <div class="slide-img bg-img" style="background-image: url('img/baddie.jpeg');"></div>
-            <!-- Black Overlay -->
+           
             <div class="black-overlay"></div>
         </div>
         <div class="single-hero-post">
-            <!-- Post Image -->
+           
             <div class="slide-img bg-img" style="background-image: url('img/cutiepootie.jpeg');"></div>
-            <!-- Black Overlay -->
+            
             <div class="black-overlay"></div>
-        </div>
-        <div class="single-hero-post">
-            <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url('img/bad1.jpeg');"></div>
-            <!-- Black Overlay -->
-            <div class="black-overlay"></div>
-        </div>
-        <div class="single-hero-post">
-            <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url('img/bad2.jpeg');"></div>
-            <!-- Black Overlay -->
-            <div class="black-overlay"></div>
-        </div>
-        <div class="single-hero-post">
-            <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url('img/cutie.jpeg');"></div>
-            <!-- Black Overlay -->
-            <div class="black-overlay"></div>
-        </div>
-        <div class="single-hero-post">
-            <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url('img/shawty.jpeg');"></div>
-            <!-- Black Overlay -->
-            <div class="black-overlay"></div>
+        </div> -->
+       
         </div>
     </div>
 
@@ -164,9 +192,9 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <!-- Post Content -->
-                    <div class="hero-slides-content text-center" style="margin-top: 100px;">
-                        <h2><br/>Verbal Vortex<br/> Gavel Club</h2>
-                        <p>Welcome to the Verbal Vortex Gavel Club! We are a vibrant community dedicated to enhancing public speaking and leadership skills. As part of the Gavel Club network, we provide opportunities for members to practice speeches, engage in debates, and develop critical leadership qualities. Our supportive environment fosters peer feedback and offers diverse learning experiences through workshops and special events. Whether you’re aiming to boost your confidence or refine your communication skills, the Verbal Vortex Gavel Club is here to help you achieve your goals and become a more effective speaker and leader.</p>
+                    <div class="hero-slides-content text-center" style=" color: #017dbd">
+                        <h2 style="font-size: 60px;"><br/>United Nations SDG</h2>
+                        <p >Welcome to the Verbal Vortex Gavel Club! We are a vibrant community dedicated to enhancing public speaking and leadership skills. As part of the Gavel Club network, we provide opportunities for members to practice speeches, engage in debates, and develop critical leadership qualities. Our supportive environment fosters peer feedback and offers diverse learning experiences through workshops and special events. Whether you’re aiming to boost your confidence or refine your communication skills, the Verbal Vortex Gavel Club is here to help you achieve your goals and become a more effective speaker and leader.</p>
                         <div class="welcome-btn-group">
                             <a href="contact.html" class="btn alazea-btn mr-30" style="z-index: 1000000;">Contact Us</a>
                             <a href="about.html" class="btn alazea-btn mr-30">Learn More</a>
@@ -178,6 +206,7 @@
     </div>
 </section>
 
+
 <section style="background-color: #004165; padding: 100px 0; display: flex; align-items: center; justify-content: center;">
     <div class="container" style="max-width: 1200px; width: 100%;">
         <div class="row" style="width: 100%; display: flex; flex-direction: row; justify-content: center;">
@@ -186,24 +215,78 @@
                     <div class="single-service-area" style="margin-bottom: 20px;">
                         <!-- Content -->
                         <div class="service-content" style="text-align: center;">
-                            <h1 style="font-size: 60px; color: white;">Meeting Information</h1>
+                            <h1 id="welcomeMessage" style="font-size: 60px; color: white;"></h1>
                         </div>
                     </div>
-
-                    <div class="single-service-area" style="display: flex; justify-content: center; align-items: center;">
-                        <div class="service-content" style="background-color: #003c6c; border-radius: 10px; padding: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); width: 100%; max-width: 950px;">
-                            <p style="color: white; font-size: 20px; margin: 0;">
-                                We meet biweekly on Saturday 3-4pm cst either on Zoom or at the Little Public Library.
-                            </p>
-                            <div class="welcome-btn-group">
-                                <a href="https://docs.google.com/document/d/1ucagqFlpsqrEAXvYC2j95CtHpe6t7u2X60nruy7t33k/edit?usp=sharing" class="btn alazea-btn mr-30" style="z-index: 1000000; background-color: #772432;" target="_blank" rel="noopener noreferrer">Meeting notes</a>
-                                <a href="https://docs.google.com/spreadsheets/d/1VFkzBiiZ54uTxCcJwJn5xWQe7YUc_aMkCObE_SWDOjg/edit?usp=sharing" class="btn alazea-btn mr-30" style="z-index: 1000000; background-color: #772432;" target="_blank" rel="noopener noreferrer">Attendance</a>
-                                <a href="https://forms.gle/QR1qiZJV18DXfF9KA" class="btn alazea-btn mr-30" style="z-index: 1000000; background-color: #772432;" target="_blank" rel="noopener noreferrer">Sign Up Here</a>
-                                <a href="https://docs.google.com/document/d/1I26nZywp76udHQwYVRCu-_dFiOczixa3erGj7qIxJOk/edit?usp=sharing" class="btn alazea-btn mr-30" style="z-index: 1000000; background-color: #772432;" target="_blank" rel="noopener noreferrer">Meeting Timings</a>
-                                <a href="https://us02web.zoom.us/j/81974906547?pwd=ojiv4Vqy68annaDtOjaqhfM0mXMPRf.1" class="btn alazea-btn mr-30" style="z-index: 1000000; background-color: #772432;" target="_blank" rel="noopener noreferrer">Zoom Link</a>
+                    
+                    <div class="container mt-5">
+                        <h1>Log Your Hours</h1>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#addHoursModal">+</button>
+                
+                        <!-- Modal -->
+                        <div class="modal fade" id="addHoursModal" tabindex="-1" role="dialog" aria-labelledby="addHoursModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addHoursModalLabel">Add Hours</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="addHoursForm">
+                                            <div class="form-group">
+                                                <label for="hours">Hours:</label>
+                                                <input type="number" class="form-control" id="hours" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sdg">Select SDG:</label>
+                                                <select class="form-control" id="sdg" required>
+                                                    <option value="">Choose an SDG</option>
+                                                    <option value="No Poverty">No Poverty</option>
+                                                    <option value="Zero Hunger">Zero Hunger</option>
+                                                    <option value="Good Health and Well-being">Good Health and Well-being</option>
+                                                    <option value="Quality Education">Quality Education</option>
+                                                    <option value="Gender Equality">Gender Equality</option>
+                                                    <option value="Clean Water and Sanitation">Clean Water and Sanitation</option>
+                                                    <option value="Affordable and Clean Energy">Affordable and Clean Energy</option>
+                                                    <option value="Decent Work and Economic Growth">Decent Work and Economic Growth</option>
+                                                    <option value="Industry, Innovation and Infrastructure">Industry, Innovation and Infrastructure</option>
+                                                    <option value="Reduced Inequality">Reduced Inequality</option>
+                                                    <option value="Sustainable Cities and Communities">Sustainable Cities and Communities</option>
+                                                    <option value="Responsible Consumption and Production">Responsible Consumption and Production</option>
+                                                    <option value="Climate Action">Climate Action</option>
+                                                    <option value="Life Below Water">Life Below Water</option>
+                                                    <option value="Life on Land">Life on Land</option>
+                                                    <option value="Peace, Justice and Strong Institutions">Peace, Justice and Strong Institutions</option>
+                                                    <option value="Partnerships for the Goals">Partnerships for the Goals</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="activityType">Activity Type:</label>
+                                                <select class="form-control" id="activityType" required>
+                                                    <option value="">Choose Activity Type</option>
+                                                    <option value="Volunteering">Volunteering</option>
+                                                    <option value="Donation">Donation</option>
+                                                    <option value="Fundraising">Fundraising</option>
+                                                    <option value="Awareness Campaign">Awareness Campaign</option>
+                                                    <option value="Mentoring">Mentoring</option>
+                                                </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-success">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div id="hoursContainer" class="mt-4">
+                            <!-- Cards will be generated and displayed here -->
+                        </div>
                     </div>
+                
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
                     
                 </div>
             </div>
@@ -211,273 +294,277 @@
     </div>
 </section>
 
-    <!-- ##### Hero Area End ##### -->
-    <section style="background-color: #772432;" class="our-services-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="row justify-content-between">
-                        <div class="col-12 col-lg-5">
-                            <div class="alazea-service-area mb-100">
-                                <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="500ms">
-                                    <!-- Content -->
-                                    <div class="service-content">
-                                        <h1 style="font-size: 60px; color: white;">What is a Gavel Club</h1>
-                                    </div>
-                                </div>
-    
-                                <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="100ms" style="margin-bottom: 10px;">
-                                    
-                                    <div class="service-content">
-                                        <p style="color: white; margin-bottom: 5px; margin-bottom: 20px;">A Gavel Club is part of the Toastmasters International program tailored for high school students to enhance their public speaking and leadership skills. Through structured activities and materials, members engage in delivering speeches, participating in debates, and receiving constructive feedback in a supportive environment. This helps them build confidence and competence in communication and leadership.                                        </p>                
-                                    </div>
-                                
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Image -->
-                        <div class="col-lg-5 d-none d-lg-block">
-                            <img src="img/rizz.jpeg" alt="Your Image" style="max-width: 500px; height: 500px; border-radius: 50%; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);">
-                        </div>
-                        <!-- End of Image -->
-                    </div>
-                </div>
+
+  <!-- Module 1: Weather Patterns -->
+  <section id="module1">
+    <h2>Understanding Weather Patterns</h2>
+    <p>Learn how climate change affects global weather patterns. Explore data from NASA’s GLOBE Observer program.</p>
+    <input type="text" id="location" placeholder="Enter your location">
+    <button onclick="getWeatherData()">Get Weather Data</button>
+    <div id="weather-result"></div>
+  </section>
+
+  <!-- Module 2: Earth Observation -->
+  <!-- <section id="module2">
+    <h2>Earth Observation and Remote Sensing</h2>
+    <p>Explore NASA satellite imagery and observe changes in the environment over time.</p>
+    <div id="map"></div>
+  </section> -->
+  <!-- Map -->
+  <!-- <section id="module2"></section>
+    <h2>Earth Observation and Remote Sensing</h2>
+    <p>Explore NASA satellite imagery and observe changes in the environment over time.</p>
+    <div id="map"></div>
+</section> -->
+
+  <!-- Module 3: Student Projects -->
+  <section id="module3">
+    <h2>Student Action Projects</h2>
+    <p>Take part in climate action projects and track your impact!</p>
+  </section>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // Map initialization
+    var map = L.map('map').setView([31.0461, 34.8516], 7); // Coordinates for Israel
+
+    // OpenStreetMap layer
+    var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    var osmLayer = L.tileLayer(osmUrl, { attribution: osmAttrib });
+    map.addLayer(osmLayer);
+
+    // AQI Tile Layer
+    var aqiToken = '312f38a7905aff78272922fdac617772d91fd516'; // Your token ID
+    var waqiUrl = `https://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=${aqiToken}`;
+    var waqiAttrib = 'Air Quality Tiles &copy; <a href="http://waqi.info">waqi.info</a>';
+    var waqiLayer = L.tileLayer(waqiUrl, { attribution: waqiAttrib });
+
+    // Add AQI layer to the map
+    map.addLayer(waqiLayer);
+</script>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+    import { getDatabase, ref, get, push } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyDR-Iy2PBZ8QX1q5sW44dQTDCfhj0YFcbk",
+        authDomain: "un-sdg-bddcc.firebaseapp.com",
+        projectId: "un-sdg-bddcc",
+        storageBucket: "un-sdg-bddcc.appspot.com",
+        messagingSenderId: "912540545037",
+        appId: "1:912540545037:web:f3e56785be062c5c576544",
+        measurementId: "G-CGX1L88HTD"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const database = getDatabase(app);
+
+    // Check authentication state
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const uid = user.uid;
+            const userRef = ref(database, 'users/' + uid);
+
+            // Retrieve user data
+            get(userRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                    // Display welcome message with username
+                    document.getElementById('welcomeMessage').innerText = `Welcome ${userData.username}`;
+                } else {
+                    console.log("No user data found");
+                }
+            }).catch((error) => {
+                console.error("Error fetching user data:", error);
+            });
+        } else {
+            // No user is signed in
+            document.getElementById('welcomeMessage').innerText = `Welcome Guest`;
+        }
+    });
+
+    // Handle form submission
+    document.getElementById('addHoursForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Get the values from the form inputs
+        const hours = document.getElementById('hours').value;
+        const sdg = document.getElementById('sdg').value;
+        const activityType = document.getElementById('activityType').value;
+
+        // Get the current user ID (assuming the user is authenticated)
+        const uid = auth.currentUser.uid;
+
+        // Reference to the user's hours in the database
+        const hoursRef = ref(database, 'users/' + uid + '/hours');
+
+        // Create an object to hold the hours data
+        const hoursData = {
+            sdg: sdg,
+            hours: hours,
+            activityType: activityType,
+            timestamp: Date.now() // Optional: include a timestamp for when the entry was made
+        };
+
+        // Save the hours data to Firebase
+        push(hoursRef, hoursData)
+            .then(() => {
+                // Success: Provide feedback to the user
+                alert('Hours logged successfully!');
+                // Clear the form fields
+                document.getElementById('addHoursForm').reset();
+                // Close the modal (optional)
+                $('#addHoursModal').modal('hide');
+                // Load the user hours again
+                loadUserHours(uid);
+            })
+            .catch((error) => {
+                console.error('Error saving hours:', error);
+                alert('An error occurred while logging hours. Please try again.');
+            });
+    });
+
+    // Load user hours from Firebase and display as cards
+    function loadUserHours(uid) {
+        const userHoursRef = ref(database, 'users/' + uid + '/hours');
+        get(userHoursRef).then((snapshot) => {
+            const hoursContainer = document.getElementById('hoursContainer');
+            hoursContainer.innerHTML = ''; // Clear existing cards
+
+            if (snapshot.exists()) {
+                snapshot.forEach(childSnapshot => {
+                    const hourData = childSnapshot.val();
+                    const hourCard = createHourCard(hourData);
+                    hoursContainer.appendChild(hourCard);
+                });
+            } else {
+                hoursContainer.innerHTML = '<p>No hours logged yet.</p>';
+            }
+        }).catch((error) => {
+            console.error("Error fetching user hours:", error);
+        });
+    }
+    function getSDGColor(sdg) {
+    const sdgColors = {
+        '1': '#DDAA2C', // No Poverty
+        '2': '#7D9B1D', // Zero Hunger
+        '3': '#5EBF5E', // Good Health and Well-being
+        '4': '#E03A3E', // Quality Education
+        '5': '#B96BB4', // Gender Equality
+        '6': '#0A92B0', // Clean Water and Sanitation
+        '7': '#F6C200', // Affordable and Clean Energy
+        '8': '#F39E00', // Decent Work and Economic Growth
+        '9': '#A93F2B', // Industry, Innovation and Infrastructure
+        '10': '#E2A83C', // Reduced Inequalities
+        '11': '#A2C0D9', // Sustainable Cities and Communities
+        '12': '#B1A32A', // Responsible Consumption and Production
+        '13': '#E37E8D', // Climate Action
+        '14': '#008DD5', // Life Below Water
+        '15': '#007B5F', // Life on Land
+        '16': '#C5B9E0', // Peace, Justice, and Strong Institutions
+        '17': '#5A7FCA'  // Partnerships for the Goals
+    };
+
+    return sdgColors[sdg] || '#FFFFFF'; // Default to white if SDG is not found
+}
+
+const sdgMapping = {
+    "No Poverty": '1',
+    "Zero Hunger": '2',
+    "Good Health and Well-being": '3',
+    "Quality Education": '4',
+    "Gender Equality": '5',
+    "Clean Water and Sanitation": '6',
+    "Affordable and Clean Energy": '7',
+    "Decent Work and Economic Growth": '8',
+    "Industry, Innovation and Infrastructure": '9',
+    "Reduced Inequalities": '10',
+    "Sustainable Cities and Communities": '11',
+    "Responsible Consumption and Production": '12',
+    "Climate Action": '13',
+    "Life Below Water": '14',
+    "Life on Land": '15',
+    "Peace, Justice, and Strong Institutions": '16',
+    "Partnerships for the Goals": '17'
+};
+function createHourCard(hourData) {
+    const card = document.createElement('div');
+    card.classList.add('card', 'mb-3');
+    card.style = 'background-color: #f8f9fa; padding: 0; border-radius: 5px;';
+
+    // Convert SDG name to its corresponding number
+    const sdgValue = sdgMapping[hourData.sdg] || hourData.sdg; // Fallback to the original value if not found
+    const color = getSDGColor(sdgValue);
+
+    const cardContent = `
+        <div style="display: flex; width: 100%;">
+            <div class="sdg-color" style="background-color: ${color}; width: 20%;"></div>
+            <div class="card-body" style="flex: 1; padding: 10px;">
+                <h5 class="card-text">SDG: ${hourData.sdg}</h5>
+                <p style="font-weight: bold;" class="card-title">Hours: ${hourData.hours}</p>
+                <p style="font-weight: bold;" class="card-text">Activity Type: ${hourData.activityType}</p>
+                <p style="font-weight: bold;" class="card-text">
+                    <small style="font-weight: bold;" class="text-muted">
+                        Logged on: ${new Date(hourData.timestamp).toLocaleString()}
+                    </small>
+                </p>
             </div>
         </div>
-    </section>
-    
-    <!-- ##### Members Gallery Start ##### -->
-<section class="members-gallery-area section-padding-100-0" style="background-color: #f8f9fa; padding: 60px 0;">
-    <div class="container">
-        <div class="row">
-            <!-- Section Heading -->
-            <div class="col-12">
-                <div class="section-heading text-center">
-                    <h2>Our Members</h2>
-                    <p>Meet the amazing members of the Verbal Vortex Gavel Club.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Member 1 -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/looksIgotitallwhatcanisay.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Sachchit Balamurugan</h5>
-                        <p>President and Founder</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/mom.jpeg" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Akila Balamurugan</h5>
-                        <p>COUNSELLOR</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/kim.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Kimberly McBrayer</h5>
-                        <p>Mentor</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Member 2 -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/reinhard.jpg" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Reinhard M. Weiss</h5>
-                        <p>Mentor</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/aditya.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Aditya Kaushik</h5>
-                        <p>VICE PRESIDENT MEMBERSHIP</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Member 2 -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/manasi.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Manasi Mahankali</h5>
-                        <p>VICE PRESIDENT PUBLIC RELATIONS</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Member 3 -->
-           
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/vishant.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Vishant Baskar</h5>
-                        <p>VICE PRESIDENT EDUCATION</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/shivani.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Shivani Satish Kumar</h5>
-                        <p>TREASURER</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/harshit.jpeg" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Harshith Annabathula</h5>
-                        <p>SERGEANT AT ARMS</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/mahish.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Mahish Suresh</h5>
-                        <p>SECRETARY</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/Sajan.jpeg" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Sajan Balamurugan</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-
-           
-
-            
-            
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/ruthvik.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Ruthvik</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/shree.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Shree</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/emptypfp.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Ranjit</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/sid.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Siddarth</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-member-area mb-100">
-                    <div class="member-img" style="width: 300px; height: 300px; margin: 0 auto; overflow: hidden; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                        <img src="img/uddish.png" alt="Member 1" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="member-info text-center mt-3">
-                        <h5>Uddish Subash</h5>
-                        <p>MEMBER</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more members as needed -->
-        </div>
-    </div>
-</section>
-<!-- ##### Members Gallery End ##### -->
+    `;
+    card.innerHTML = cardContent;
+    return card;
+}
 
 
-    <!-- ##### Service Area Start ##### -->
-   
-    <!-- ##### Service Area End ##### -->
 
-    
+//     // Create a card element for each hour entry
+//     // Create a card element for each hour entry
+//     function createHourCard(hourData) {
+//     const card = document.createElement('div');
+//     card.classList.add('card', 'mb-3');
+//     card.style = 'background-color: #f8f9fa; padding: 0; border-radius: 5px;';
+
+//     const sdgValue = String(hourData.sdg); // Convert to string if needed
+//     const color = getSDGColor(sdgValue);
+
+//     const cardContent = `
+//         <div style="display: flex; width: 100%;">
+//             <div class="sdg-color" style="background-color: ${color}; width: 20%;"></div>
+//             <div class="card-body" style="flex: 1; padding: 10px;">
+//                 <h5 class="card-text">SDG: ${hourData.sdg}</h5>
+//                 <p style="font-weight: bold;" class="card-title">Hours: ${hourData.hours}</p>
+//                 <p style="font-weight: bold;" class="card-text">Activity Type: ${hourData.activityType}</p>
+//                 <p style="font-weight: bold;" class="card-text">
+//                     <small style="font-weight: bold;" class="text-muted">
+//                         Logged on: ${new Date(hourData.timestamp).toLocaleString()}
+//                     </small>
+//                 </p>
+//             </div>
+//         </div>
+//     `;
+//     card.innerHTML = cardContent;
+//     return card;
+// }
+
+
+
+    // Load user hours on page load
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            loadUserHours(user.uid);
+        }
+    });
+</script>
+
+<!-- <h1 id="welcomeMessage"></h1> Welcome message will be displayed here -->
+
 
     
 

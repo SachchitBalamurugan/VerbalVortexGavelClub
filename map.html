@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+        #map {
+            height: 600px; /* Set the height of the map */
+            width: 100%;    /* Set the width of the map to 100% of the parent container */
+        }
+        /* Optional: Add some padding or margin below the map for content */
+        .content {
+            padding: 20px;
+            text-align: center; /* Center the text */
+        }
+        .aqi-info {
+            margin-top: 20px; /* Margin above the info box */
+        }
+        /* Individual heading containers with different background colors */
+        .heading-container {
+            padding: 15px; /* Padding inside each container */
+            border-radius: 8px; /* Rounded corners */
+            color: white; /* Text color for better contrast */
+            margin: 10px 0; /* Vertical spacing between containers */
+        }
+        .heading1 { background-color: #01aed9; } /* Blue */
+        .heading2 { background-color: #5ebb46; } /* Green */
+        .heading3 { background-color: #fa9d26; } /* Orange */
+        .heading4 { background-color: #fcb712; } /* Yellow */
+        .heading5 { background-color: #eb1c2e; } /* Neon Red */
+        .heading6 { background-color: #e01483; } /* Pink */
+        .heading7 { background-color: #193769; } /* Dark Blue */
+        .heading8 { background-color: #8f1838; } /* Maroon */
+        .heading9 { background-color: #c21f32; } /* Dark Red */
+        .heading10 { background-color: #017dbd; } /* Medium Blue */
+        .heading11 { background-color: #47773d; } /* Dark Green */
+        .heading12 { background-color: #ce8d29; } /* Gold */
+        .heading13 { background-color: #f46e27; } /* Dark Orange */
+        .heading14 { background-color: #f0412c; } /* Neon Orange */
+        .heading15 { background-color: #279b48; } /* Medium Green */
+        .heading16 { background-color: #d3a02b; } /* Light Gold */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- ***** Top Header Area ***** -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <a href="index.html" class="nav-brand"><img style="width: 90px; height: 90px;" src="img/R.png" alt=""></a>
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <div class="classynav">
+                                <ul>
+                                   <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="#">Club Information</a>
+                                        <ul class="dropdown">
+                                            <li><a href="leadership.html">Leadership Roles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="map.html">Global Pollution Data</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="resources.html">Resources</a>                                
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="search-form">
+                        <form action="#" method="get">
+                            <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                            <button type="submit" class="d-none"></button>
+                        </form>
+                        <div class="closeIcon"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="height: 50px;"><h1 style="text-align: center; margin-top: 100px;">Air Quality Map</h1>   </div>
+       
+
+    <div id="map"></div>
+    
+    <div class="content">
+        
+        <div class="aqi-info">
+            
+            <div class="heading-container heading1">
+                <h2 style="color: white;">Understanding Air Quality Index (AQI)</h2>
+            </div>
+            <p>The Air Quality Index (AQI) is a measure used to communicate how polluted the air currently is or how polluted it is forecast to become. The AQI is calculated based on the concentrations of various pollutants, including particulate matter (PM10 and PM2.5), nitrogen dioxide (NO2), sulfur dioxide (SO2), carbon monoxide (CO), and ozone (O3).</p>
+
+            <div class="heading-container heading2">
+                <h3 style="color: white;">Why AQI Matters</h3>
+            </div>
+            <p>Monitoring air quality is essential for public health and safety. Poor air quality can lead to serious health problems, including respiratory diseases, cardiovascular issues, and even premature death. By understanding and tracking AQI data, communities can take action to reduce pollution and protect their health.</p>
+
+            <div class="heading-container heading3">
+                <h3 style="color: white;">Connection to Sustainable Development Goals (SDG)</h3>
+            </div>
+            <p>The SDGs include several goals related to air quality and health, notably:</p>
+            <ul>
+                <li><strong>SDG 3:</strong> Good Health and Well-Being - Ensure healthy lives and promote well-being for all at all ages.</li>
+                <li><strong>SDG 11:</strong> Sustainable Cities and Communities - Make cities and human settlements inclusive, safe, resilient, and sustainable.</li>
+                <li><strong>SDG 13:</strong> Climate Action - Take urgent action to combat climate change and its impacts.</li>
+            </ul>
+            <p>By engaging with AQI data and understanding its implications, students can become active participants in achieving these goals in their communities.</p>
+        </div>
+
+        <p>This is some additional content below the AQI information. You can scroll down to see more text.</p>
+        <p>More content can go here.</p>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Map initialization
+        var map = L.map('map', {
+            scrollWheelZoom: false // Disable zooming with mouse scroll
+        }).setView([31.0461, 34.8516], 7); // Coordinates for Israel
+
+        // OpenStreetMap layer
+        var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+        var osmLayer = L.tileLayer(osmUrl, { attribution: osmAttrib });
+        map.addLayer(osmLayer);
+
+        // AQI Tile Layer
+        var aqiToken = '312f38a7905aff78272922fdac617772d91fd516'; // Your token ID
+        var waqiUrl = `https://tiles.aqicn.org/tiles/usepa-aqi/{z}/{x}/{y}.png?token=${aqiToken}`;
+        var waqiAttrib = 'Air Quality Tiles &copy; <a href="http://waqi.info">waqi.info</a>';
+        var waqiLayer = L.tileLayer(waqiUrl, { attribution: waqiAttrib });
+
+        // Add AQI layer to the map
+        map.addLayer(waqiLayer);
+    </script>
+</body>
+</html>

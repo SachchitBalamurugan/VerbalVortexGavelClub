@@ -1,0 +1,16 @@
+#01aed9 blue
+#5ebb46 green
+#fa9d26 orange
+#fcb712 yellow
+#eb1c2e neon red
+#e01483 pink
+#193769 dark blue
+#8f1838 maroon
+#c21f32 dark red
+#017dbd medium blue
+#47773d dark green
+#ce8d29 gold
+#f46e27 dark orange
+#f0412c neon orange
+#279b48 medium green
+#d3a02b light gold

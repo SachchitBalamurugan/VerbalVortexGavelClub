@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Log Hours</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Log Your Hours</h1>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addHoursModal">+</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addHoursModal" tabindex="-1" role="dialog" aria-labelledby="addHoursModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addHoursModalLabel">Add Hours</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addHoursForm">
+                            <div class="form-group">
+                                <label for="hours">Hours:</label>
+                                <input type="number" class="form-control" id="hours" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sdg">Select SDG:</label>
+                                <select class="form-control" id="sdg" required>
+                                    <option value="">Choose an SDG</option>
+                                    <option value="No Poverty">No Poverty</option>
+                                    <option value="Zero Hunger">Zero Hunger</option>
+                                    <option value="Good Health and Well-being">Good Health and Well-being</option>
+                                    <option value="Quality Education">Quality Education</option>
+                                    <option value="Gender Equality">Gender Equality</option>
+                                    <option value="Clean Water and Sanitation">Clean Water and Sanitation</option>
+                                    <option value="Affordable and Clean Energy">Affordable and Clean Energy</option>
+                                    <option value="Decent Work and Economic Growth">Decent Work and Economic Growth</option>
+                                    <option value="Industry, Innovation and Infrastructure">Industry, Innovation and Infrastructure</option>
+                                    <option value="Reduced Inequality">Reduced Inequality</option>
+                                    <option value="Sustainable Cities and Communities">Sustainable Cities and Communities</option>
+                                    <option value="Responsible Consumption and Production">Responsible Consumption and Production</option>
+                                    <option value="Climate Action">Climate Action</option>
+                                    <option value="Life Below Water">Life Below Water</option>
+                                    <option value="Life on Land">Life on Land</option>
+                                    <option value="Peace, Justice and Strong Institutions">Peace, Justice and Strong Institutions</option>
+                                    <option value="Partnerships for the Goals">Partnerships for the Goals</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="activityType">Activity Type:</label>
+                                <select class="form-control" id="activityType" required>
+                                    <option value="">Choose Activity Type</option>
+                                    <option value="Volunteering">Volunteering</option>
+                                    <option value="Donation">Donation</option>
+                                    <option value="Fundraising">Fundraising</option>
+                                    <option value="Awareness Campaign">Awareness Campaign</option>
+                                    <option value="Mentoring">Mentoring</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

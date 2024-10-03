@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .signup {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .signup a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Load Firebase libraries -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+        import { getDatabase, ref, set, update } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDR-Iy2PBZ8QX1q5sW44dQTDCfhj0YFcbk",
+            authDomain: "un-sdg-bddcc.firebaseapp.com",
+            projectId: "un-sdg-bddcc",
+            storageBucket: "un-sdg-bddcc.appspot.com",
+            messagingSenderId: "912540545037",
+            appId: "1:912540545037:web:f3e56785be062c5c576544",
+            measurementId: "G-CGX1L88HTD"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const database = getDatabase(app);
+
+        // Login function
+        window.login = function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!validate_field(email) || !validate_field(password)) {
+                alert("Email and Password cannot be empty");
+                return;
+            }
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then(() => {
+                    alert("Logged in successfully!");
+                    // Redirect to a different page if needed
+                    window.location.href = "dashboard.html"; // Example redirection
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    alert(`Error: ${errorMessage}`);
+                    console.error("Error signing in:", error);
+                });
+        }
+
+        // Register function
+        window.register = function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!validate_email(email) || !validate_password(password)) {
+                alert("Email or Password format wrong");
+                return;
+            }
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    const userData = {
+                        email: email,
+                        last_login: Date.now()
+                    };
+                    set(ref(database, 'users/' + user.uid), userData);
+                    alert('User Created');
+                })
+                .catch((error) => {
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                    console.error("Error creating user:", error);
+                });
+        }
+        window.login = function() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Validate email and password formats
+    if (!validate_email(email) || !validate_password(password)) {
+        alert("Email or Password format wrong");
+        return;
+    }
+
+    // Sign in with Firebase Auth
+    signInWithEmailAndPassword(auth, email, password)
+        .then(function(userCredential) {
+            // Successful login
+            const user = userCredential.user; // Get user info
+            const userData = {
+                last_login: Date.now()
+            };
+
+            // Update last login time in the database
+            update(ref(database, 'users/' + user.uid), userData)
+                .then(() => {
+                    alert('User logged in successfully!');
+                    // Redirect to a different page if needed
+                    window.location.href = "index.html"; // Example redirection
+                })
+                .catch((error) => {
+                    console.error("Error updating user data:", error);
+                });
+        })
+        .catch(function(error) {
+            const errorMessage = error.message;
+            alert(errorMessage);
+            console.error("Error signing in:", error);
+        });
+}
+
+
+        // Validation Functions
+        function validate_email(email) {
+            const expression = /^[^@]+@\w+(\.\w+)+\w$/;
+            return expression.test(email);
+        }
+
+        function validate_password(password) {
+            return password.length >= 6; // Firebase only accepts lengths greater than or equal to 6
+        }
+
+        function validate_field(field) {
+            return field && field.length > 0; // Check if field is not null and has length
+        }
+    </script>
+
+    <div class="container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button onclick="login()">Login</button>
+
+        <div class="signup">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+</body>
+</html>

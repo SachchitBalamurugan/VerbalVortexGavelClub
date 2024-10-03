@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+        #location-input {
+            margin: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    
+
+    <h1>Air Quality in a City</h1>
+    
+    <!-- Input for city name -->
+    <div id="location-input">
+        <input type="text" id="city" placeholder="Enter city name (e.g., Beijing)" />
+        <button id="submit">Get Air Quality</button>
+    </div>
+
+    <div id="map"></div>
+    <div id="info"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('map').setView([39.954592, 116.468117], 12);
+
+        // Add OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Function to fetch air quality data
+        function fetchAirQuality(city) {
+            fetch(`https://api.waqi.info/feed/${city}/?token=312f38a7905aff78272922fdac617772d91fd516`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        const cityName = data.data.city.name;
+                        const aqi = data.data.aqi;
+                        const lat = data.data.city.geo[0];
+                        const lng = data.data.city.geo[1];
+
+                        // Clear previous markers
+                        map.eachLayer(layer => {
+                            if (layer instanceof L.Marker) {
+                                map.removeLayer(layer);
+                            }
+                        });
+
+                        // Add a marker for the city
+                        L.marker([lat, lng]).addTo(map)
+                            .bindPopup(`${cityName}<br>AQI: ${aqi}`)
+                            .openPopup();
+
+                        // Update the map view
+                        map.setView([lat, lng], 12);
+
+                        // Display additional information
+                        document.getElementById('info').innerHTML = `<p>Air Quality Index in ${cityName}: ${aqi}</p>`;
+                    } else {
+                        console.error('Failed to retrieve data:', data);
+                        alert('City not found or data unavailable.');
+                    }
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Event listener for the button click
+        document.getElementById('submit').addEventListener('click', () => {
+            const city = document.getElementById('city').value.trim().toLowerCase();
+            if (city) {
+                fetchAirQuality(city);
+            } else {
+                alert('Please enter a city name.');
+            }
+        });
+    </script>
+
+</body>
+</html>
